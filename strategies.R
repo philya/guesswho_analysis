@@ -8,7 +8,11 @@
 # props <- read.csv('guesswho.csv')
 # opt_combs <- find_question_sets(props)
 
+# Question popularity in winning combs
+# sort(sapply(opt_combs[,1:15], sum), decreasing = T)
 
+
+# Create a matrix of all possible combinations of questions
 fields_combs <- function(nf) {
     combs <- matrix(F, ncol=nf, nrow= 2**nf)
     lastn = 2 ** nf - 1

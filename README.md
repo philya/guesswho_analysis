@@ -7,3 +7,6 @@ Usage in R:
     props <- read.csv('guesswho.csv')
     opt_combs <- find_question_sets(props)
     
+Question popularity in winning combs:
+
+    sort(sapply(opt_combs[, 1:15], sum), decreasing=T)
