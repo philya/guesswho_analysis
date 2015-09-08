@@ -9,4 +9,9 @@ Usage in R:
     
 Question popularity in optimal combinations:
 
-    sort(sapply(opt_combs[, 1:15], sum), decreasing=T)
+    q_num <- length(props) - 1
+    sort(sapply(opt_combs[, 1:q_num], sum), decreasing=T)
+    
+List question sets:
+
+    sapply(1: nrow(opt_combs), function(x) colnames(opt_combs[, simplify2array(opt_combs[x, 1:q_num])][x, ]))
