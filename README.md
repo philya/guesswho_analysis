@@ -1,5 +1,5 @@
 
-Find winning series of questions for "Guess Who" game
+Find optimal series of questions for the "Guess Who" game
 
 Usage in R:
 
